@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About   
+    </ion-title>
+
+	 <ion-buttons end>
+	    <button ion-button icon-only (click)="addActivity()">
+	      <ion-icon name='add'></ion-icon>
+	    </button>
+	 </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-item *ngFor="let activity of activities">
+  <ion-label> {{ activity.name }}</ion-label>
+
+  <ion-datetime displayFormat="DDDD MMM DD, YYYY"  pickerFormat="MMM DDD YYYY" [(ngModel)]="activity.date" placeholder="Date"></ion-datetime>
+</ion-item>
+
+
+</ion-content>
