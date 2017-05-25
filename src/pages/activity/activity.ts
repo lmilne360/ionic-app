@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-activity',
+  templateUrl: 'activity.html'
 })
-export class AboutPage {
+export class ActivityPage {
 	activities: any[]
 	myDate: String = new Date().toISOString();
 
