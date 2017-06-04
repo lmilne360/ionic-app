@@ -10,8 +10,10 @@ import { ActivityDetailsPage} from '../activity-details/activity-details';
 })
 export class ActivityPage {
 	activities: any[]
+
+  // Need to change date to use local time Later
 	myDate: String = new Date().toISOString();
-  //myDate = new Date();
+
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   	this.activities = [ {name: "Chest", date: this.myDate }]

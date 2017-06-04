@@ -13,7 +13,7 @@
       <ion-input placeholder="Title" [(ngModel)]="activity.name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Location"></ion-input>
+      <ion-input placeholder="Location" [(ngModel)]="activity.location" ></ion-input>
     </ion-item>
   </ion-list>
 
@@ -28,6 +28,7 @@
       <ion-label>Start Time</ion-label>
       <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="activity.date"></ion-datetime> 
     </ion-item>
+
   </ion-list>
 
 </ion-content>
