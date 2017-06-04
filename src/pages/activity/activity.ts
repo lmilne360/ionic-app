@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { ActivityDetailsPage} from '../activity-details/activity-details';
 
 @Component({
   selector: 'page-activity',
@@ -10,6 +11,7 @@ import { AlertController } from 'ionic-angular';
 export class ActivityPage {
 	activities: any[]
 	myDate: String = new Date().toISOString();
+  //myDate = new Date();
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   	this.activities = [ {name: "Chest", date: this.myDate }]
@@ -53,6 +55,13 @@ export class ActivityPage {
       ]
     });
     prompt.present();
+  }
+
+  // Navigate to Activity details page
+
+  selectActivity(activity){
+    this.navCtrl.push( ActivityDetailsPage, { activity })
+    console.log(activity);
   }
 
 }
