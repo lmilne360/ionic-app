@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      {{ activity.name }}
+      {{ activity.title }}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,7 +10,7 @@
 
   <ion-list>
     <ion-item>
-      <ion-input placeholder="Title" [(ngModel)]="activity.name"></ion-input>
+      <ion-input placeholder="Title" [(ngModel)]="activity.title"></ion-input>
     </ion-item>
     <ion-item>
       <ion-input placeholder="Location" [(ngModel)]="activity.location" ></ion-input>
