@@ -16,10 +16,10 @@
 
 <ion-content padding>
 
-<ion-item *ngFor="let activity of activities">
-  <ion-label> {{ activity.name }}</ion-label>
+<ion-item *ngFor="let activity of activities" (click)="selectActivity(activity)">
+  <ion-label> {{ activity.name }} </ion-label>
 
-  <ion-datetime displayFormat="DDDD MMM DD, YYYY"  pickerFormat="MMM DDD YYYY" [(ngModel)]="activity.date" placeholder="Date"></ion-datetime>
+  <!--<ion-datetime displayFormat="DDDD MMM DD, YYYY"  pickerFormat="MMM DDD YYYY" [(ngModel)]="activity.date" placeholder="Date"></ion-datetime> -->
 </ion-item>
 
 
