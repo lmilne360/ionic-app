@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { ActivityDetailsPage} from '../activity-details/activity-details';
 
+import { ActivityModel} from './activity-model';
+
 @Component({
   selector: 'page-activity',
   templateUrl: 'activity.html'
@@ -12,11 +14,12 @@ export class ActivityPage {
 	activities: any[]
 
   // Need to change date to use local time Later
-	myDate: String = new Date().toISOString();
+	myDate: string = new Date().toISOString();
 
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-  	this.activities = [ {name: "Chest", date: this.myDate }]
+  	this.activities = []
+    this.activities.push(new ActivityModel('Chest', this.myDate))
   }
 
 /** Old addActivity method
@@ -31,11 +34,11 @@ export class ActivityPage {
   addActivity(){
     let prompt= this.alertCtrl.create({
       title: 'New Activity',
-      message: "Enter a name for this activity",
+      message: "Enter the title for this activity",
       inputs: [
       {
-        name: 'name',
-        placeholder: 'Name'
+        name: 'title',
+        placeholder: 'Title'
       }],
 
       buttons: [
