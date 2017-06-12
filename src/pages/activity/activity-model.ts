@@ -1,7 +1,8 @@
 export class ActivityModel {
 
-	constructor( public title: string, public date: string){
+	constructor( public title: string, public date: string,  public description?: string){
 		this.title = title;
 		this.date = date;
+		this.description = description;
 	}
 }
