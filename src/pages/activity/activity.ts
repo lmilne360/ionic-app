@@ -5,6 +5,7 @@ import { AlertController } from 'ionic-angular';
 import { ActivityDetailsPage} from '../activity-details/activity-details';
 
 import { ActivityModel} from './activity-model';
+import { ACTIVITIES } from '../../assets/mock-data/mock-activities';
 
 @Component({
   selector: 'page-activity',
@@ -18,7 +19,7 @@ export class ActivityPage {
 
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-  	this.activities = []
+  	this.activities = ACTIVITIES;
     this.activities.push(new ActivityModel('Chest', this.myDate))
   }
 
