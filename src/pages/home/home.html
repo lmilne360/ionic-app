@@ -1,9 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Background Images</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
- <p>Home Page</p>
+<ion-content class="card-background-page">
+
+  <ion-card *ngFor="let card of items">
+    <img src="assets/Images/card-saopaolo.png"/>
+    <div class="card-title">{{ card.title }}</div>
+    <div class="card-subtitle">{{ card.description }}</div>
+  </ion-card>
+
+
 </ion-content>
